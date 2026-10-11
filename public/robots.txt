@@ -1,0 +1,5 @@
+# Without this file the SPA catch-all rewrite serves index.html for
+# /robots.txt, and an auditor parses that HTML as a robots file — which
+# reports dozens of syntax errors and drops the SEO score.
+User-agent: *
+Allow: /
