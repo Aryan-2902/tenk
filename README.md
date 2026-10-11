@@ -4,8 +4,8 @@
 
 Built for the problem statement **"Broke But Functional — Survive the Month."**
 
-**Live:** _add the deployed URL here after running `vercel --prod`_
-**Repo:** _add this repository's GitHub URL here_
+**Live:** https://tenk-two.vercel.app
+**Repo:** https://github.com/Aryan-2902/tenk
 
 TenK is a modern, interactive personal finance experience built for Gen Z around a single
 hard constraint: one limited budget of **₹10,000** to last **30 days**.
