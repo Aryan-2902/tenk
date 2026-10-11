@@ -164,6 +164,11 @@ sequence — the gate this project ships through.
   and an oversized array.
 - **No secrets, API keys, or backend credentials anywhere** — the whole app is client-side
   state in `localStorage`; there is no server component to leak.
+- **Dependencies are kept current.** `npm run lint` runs ESLint (flat config, TypeScript +
+  React Hooks + `jsx-a11y` rules) with zero errors, and `npm audit` shows zero vulnerabilities
+  in anything that ships to the browser — every remaining finding is in a build-time-only
+  devDependency (`vite`, `vitest`, `tailwindcss` and their internals), never bundled into the
+  production output.
 
 ## Tech stack
 
@@ -195,7 +200,8 @@ npm run build         # production build into dist/
 npm run preview       # serve the production build
 npm run typecheck     # tsc --noEmit
 npm run test          # vitest run
-npm run build:strict  # typecheck, then test, then build — the ship gate
+npm run lint          # eslint .
+npm run build:strict  # typecheck, then lint, then test, then build — the ship gate
 ```
 
 Requires Node 18 or newer.

@@ -58,6 +58,7 @@ describe('parseFinanceState', () => {
       ],
     })
     expect(result).not.toBeNull()
+    // eslint-disable-next-line no-control-regex -- intentionally asserting control chars are gone
     expect(result!.transactions[0].label).not.toMatch(/[\u0000-\u0008]/)
     expect(result!.transactions[0].label.length).toBeLessThanOrEqual(120)
   })
